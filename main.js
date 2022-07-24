@@ -12,11 +12,20 @@ setInterval(function () {
     edit.textContent = ``;
   }
 }, 200);
-//---------------------------------------
+//---------------------------------------Menue
 let menue = document.querySelector("#menue");
 let navul = document.querySelector(".navul");
 menue.addEventListener("click", function () {
   navul.classList.toggle("display");
+});
+//hide menue
+let hid = document.querySelector("nav i");
+document.addEventListener("click", function (e) {
+  if (e.target != hid) {
+    if (navul.className == "navul display") {
+      navul.classList.toggle("display");
+    }
+  }
 });
 //-----------------------------------Scroll button
 let btn = document.querySelector(".top");
@@ -33,7 +42,3 @@ window.onscroll = function () {
     btn.classList.remove("scroll");
   }
 };
-
-//-------------------animation on skills
-let skills = document.querySelector(".myskills");
-let divskils = document.querySelectorAll(".skills .myskills div");
