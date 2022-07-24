@@ -1,5 +1,6 @@
 /* start global */
 /* javascript menu */
+
 .display {
   display: inline-block;
   flex-direction: column;
@@ -13,7 +14,9 @@
   padding: 20px;
   z-index: 1;
 }
-
+.hidden {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -427,6 +430,7 @@ h4 {
 .skills .myskills div:hover {
   background-color: var(--main-color);
   transition: 0.3s;
+  transform: translateY(-15px);
 }
 
 .skills .myskills div:hover i {
@@ -445,3 +449,51 @@ h4 {
 }
 
 /* End skills */
+/* start services */
+.services {
+  padding-bottom: 70px;
+  background-image: linear-gradient(to bottom, #113a5d, #000 10px, #008080);
+  color: white;
+}
+.serv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .serv {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.serv div {
+  padding: 15px;
+  background-color: #32323275;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.serv div:hover {
+  transform: translateY(-15px);
+}
+.serv div:hover h2 {
+  color: white;
+}
+.serv div i {
+  font-size: 45px;
+  padding: 20px 0 0;
+  color: white;
+}
+.serv div h2 {
+  color: var(--main-color);
+  padding: 10px;
+}
+.serv div p {
+  padding: 5px;
+  color: wheat;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+/* end services */
