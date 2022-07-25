@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: end;
   align-items: start;
+  text-align: left;
   position: absolute;
   top: 100%;
   right: 0;
@@ -16,6 +17,9 @@
 }
 .hidden {
   display: none;
+}
+.visible {
+  display: inline-block;
 }
 html {
   scroll-behavior: smooth;
@@ -134,7 +138,7 @@ nav ul li a {
   text-align: center;
   display: inline-block;
 }
-nav ul li a:hover {
+nav ul li:hover a {
   color: var(--main-color);
   background-color: rgb(255, 255, 255, 60%);
   padding: 5px;
@@ -142,6 +146,26 @@ nav ul li a:hover {
   text-align: center;
   display: inline-block;
   border-radius: 10px;
+}
+@media (max-width: 900px) {
+  nav ul li {
+    width: 100%;
+    margin-left: 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+  nav ul li:hover a {
+    color: var(--main-color);
+    background-color: rgb(255, 255, 255, 60%);
+    text-align: left;
+    width: 100%;
+  }
 }
 /* End nav  */
 /* start home  */
@@ -497,3 +521,209 @@ h4 {
   margin-top: 15px;
 }
 /* end services */
+/* start portfolio */
+.portfol {
+  color: white;
+  padding-bottom: 100px;
+  background-image: linear-gradient(180deg, #008080 5%, #1d1f20 14%, #2f1050);
+}
+.allthing,
+.css3,
+.cssanimation,
+.javaScript {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 20px;
+}
+
+.allthing div,
+.css3 div,
+.cssanimation div,
+.javaScript div {
+  background-color: #111514;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 7px;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+}
+.allthing div p,
+.css3 div p,
+.cssanimation div p,
+.javaScript div p {
+  padding-left: 10px;
+}
+
+/* allthing overlay*/
+.allthing .overlay {
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -100%;
+  left: 7px;
+  border-radius: 0;
+  width: calc(100% - 14px);
+  height: 100%;
+  background-color: rgb(180 0 171 / 70%);
+  transition: 0.5s;
+}
+.allthing div:hover .overlay {
+  top: calc(0% - 49px);
+}
+.allthing .overlay a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* css3 overlay*/
+.css3 .overlay {
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -100%;
+  left: 7px;
+  border-radius: 0;
+  width: calc(100% - 14px);
+  height: 100%;
+  background-color: rgb(180 0 171 / 70%);
+  transition: 0.5s;
+}
+.css3 div:hover .overlay {
+  top: calc(0% - 49px);
+}
+.css3 .overlay a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+/* cssanimation overlay*/
+.cssanimation .overlay {
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -100%;
+  left: 7px;
+  border-radius: 0;
+  width: calc(100% - 14px);
+  height: 100%;
+  background-color: rgb(180 0 171 / 70%);
+  transition: 0.5s;
+}
+.cssanimation div:hover .overlay {
+  top: calc(0% - 49px);
+}
+.cssanimation .overlay a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+/* javaScript overlay*/
+.javaScript .overlay {
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -100%;
+  left: 7px;
+  border-radius: 0;
+  width: calc(100% - 14px);
+  height: 100%;
+  background-color: rgb(180 0 171 / 70%);
+  transition: 0.5s;
+}
+.javaScript div:hover .overlay {
+  top: calc(0% - 49px);
+}
+.javaScript .overlay a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.shufful img {
+  width: 100%;
+  height: 150px;
+}
+/* -------------------------- */
+
+.shuffelhiden {
+  display: none;
+}
+
+/* -------------------------------------------- */
+
+.portfol .container ul {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+
+.allul {
+  background-color: var(--main-color);
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.cssul {
+  background-color: var(--main-color);
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.animationul {
+  background-color: var(--main-color);
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.javaul {
+  background-color: var(--main-color);
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.active {
+  background-color: white;
+  color: var(--main-color);
+}
+
+/* end portfolio */
