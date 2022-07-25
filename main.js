@@ -42,3 +42,63 @@ window.onscroll = function () {
     btn.classList.remove("scroll");
   }
 };
+//--------------visible---------shuffel
+let all = document.querySelector(".allul");
+let cssul = document.querySelector(".cssul");
+let animationul = document.querySelector(".animationul");
+let javaul = document.querySelector(".javaul");
+let allthing = document.querySelector(".allthing");
+let css3 = document.querySelector(".css3");
+let cssanimation = document.querySelector(".cssanimation");
+let javaScript = document.querySelector(".javaScript");
+
+all.addEventListener("click", function () {
+  // add class active to target element
+  all.classList.add("active");
+  cssul.classList.remove("active");
+  animationul.classList.remove("active");
+  javaul.classList.remove("active");
+  // make target element visible
+  allthing.classList.remove("shuffelhiden");
+  css3.classList.add("shuffelhiden");
+  cssanimation.classList.add("shuffelhiden");
+  javaScript.classList.add("shuffelhiden");
+});
+
+cssul.addEventListener("click", function () {
+  // add class active to target element
+  all.classList.remove("active");
+  cssul.classList.add("active");
+  animationul.classList.remove("active");
+  javaul.classList.remove("active");
+  // make target element visible
+  css3.classList.remove("shuffelhiden");
+  allthing.classList.add("shuffelhiden");
+  cssanimation.classList.add("shuffelhiden");
+  javaScript.classList.add("shuffelhiden");
+});
+
+animationul.addEventListener("click", function () {
+  // add class active to target element
+  all.classList.remove("active");
+  cssul.classList.remove("active");
+  animationul.classList.add("active");
+  javaul.classList.remove("active");
+  // make target element visible
+  css3.classList.add("shuffelhiden");
+  allthing.classList.add("shuffelhiden");
+  cssanimation.classList.remove("shuffelhiden");
+  javaScript.classList.add("shuffelhiden");
+});
+javaul.addEventListener("click", function () {
+  // add class active to target element
+  all.classList.remove("active");
+  cssul.classList.remove("active");
+  animationul.classList.remove("active");
+  javaul.classList.add("active");
+  // make target element visible
+  css3.classList.add("shuffelhiden");
+  allthing.classList.add("shuffelhiden");
+  cssanimation.classList.add("shuffelhiden");
+  javaScript.classList.remove("shuffelhiden");
+});
