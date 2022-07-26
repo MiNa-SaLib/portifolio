@@ -102,3 +102,4 @@ javaul.addEventListener("click", function () {
   cssanimation.classList.add("shuffelhiden");
   javaScript.classList.remove("shuffelhiden");
 });
+ 
